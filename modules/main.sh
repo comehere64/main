@@ -1,7 +1,3 @@
-# 删除旧日志
-rm -f /data/adb/ADPDEDT/log/ADPDEDT.log
-
-
 # 目前仅删除环境检测工具在 /sdcard/Android 目录下的私有文件夹
 
 # Momo (io.github.vvb2060.mahoshojo)

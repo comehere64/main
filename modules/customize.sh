@@ -7,7 +7,7 @@ if [ "$BOOTMODE" ] && [ "$KSU" ]; then
   ui_print "*********************************************************"
   ui_print "- Installing from KernelSU app"
   ui_print "- KernelSU version: $KSU_KERNEL_VER_CODE (kernel) + $KSU_VER_CODE (ksud)"
-  ui_print "*********************************************************"
+  ui_print " "
   if [ "$(which magisk)" ]; then
     ui_print "*********************************************************"
     ui_print "! Multiple root implementation is NOT supported!"
@@ -18,7 +18,7 @@ elif [ "$BOOTMODE" ] && [ "$MAGISK_VER_CODE" ]; then
   ui_print "*********************************************************"
   ui_print "- Installing from Magisk app"
   ui_print "- Magisk version: $MAGISK_VER_CODE"
-  ui_print "*********************************************************"
+  ui_print " "
 else
   ui_print "*********************************************************"
   ui_print "! Install from recovery is not supported"
@@ -29,7 +29,7 @@ fi
 ui_print "*********************************************************"
 ui_print "- module information:"
 ui_print "- ADPDEDT version: $(grep_prop version $TMPDIR/module.prop)"
-ui_print "*********************************************************"
+ui_print " "
 
 ui_print "*********************************************************"
 ui_print "- unzip"
@@ -45,10 +45,11 @@ set_perm_recursive $ADPDEDT_PATH 0 0 0755 0644
 set_perm $MODPATH/action.sh 0 0 0755
 set_perm $MODPATH/service.sh 0 0 0755
 set_perm $MODPATH/main.sh 0 0 0755
-ui_print "*********************************************************"
+ui_print " "
 
 ui_print "*********************************************************"
 ui_print "- installed"
 ui_print "- ADPDEDT root: $ADPDEDT_PATH"
 ui_print "- welcome to ADPDEDT"
+ui_print " "
 ui_print "*********************************************************"
