@@ -1,7 +1,7 @@
 id=ADPDEDT
 name=ADPDEDT
-version=v1.2
-versionCode=3
+version=v1.3
+versionCode=4
 author=星空幻梦_152
 description=自动删除环境检测工具私有目录（Automatically Delete Private Directories of Environment Detection Tools）
 support=https://github.com/gunfub/ADPDEDT
