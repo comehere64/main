@@ -20,7 +20,7 @@
 
 1. 每次开机后自动激活
 2. 在root管理器的模块管理中，手动激活
-3. 在终端，手动执行脚本文件 `/data/adb/modules/ADPDEDT/main.sh` （需要root权限）
+3. 在终端，手动执行脚本文件 `/data/adb/modules/ADPDEDT/action.sh` （需要root权限）
 
 
 
