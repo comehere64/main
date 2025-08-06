@@ -95,4 +95,5 @@ rm -rvf /storage/emulated/0/Android/data/com.lingqing.detector
 rm -rvf /storage/emulated/0/Android/obb/com.lingqing.detector
 rm -rvf /storage/emulated/0/Android/media/com.lingqing.detector
 
+echo "执行完毕"
 exit 0
