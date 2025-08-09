@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- HTML5 文档声明 -->
+<html>
+<head>
+    <meta charset="utf-8"> <!-- UTF-8 字符编码 -->
+    <!-- 视口设置：宽度=设备宽度，初始缩放=1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADPDEDT</title> <!-- 页面标题 -->
+    
+    <!-- 主样式表 -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!-- MMRL 安全区域样式 -->
+    <link rel="stylesheet" type="text/css" href="/mmrl/insets.css" />
+    
+    <!-- 主 JavaScript 模块 -->
+    <script type="module" crossorigin src="scripts.js"></script>
+</head>
+<body>
+    <!-- 主内容区域 -->
+    <div class="content">
+        <!-- 标题区域 -->
+        <div class="header">
+            <!-- 主标题 -->
+            <h3>
+                ADPDEDT <!-- 模块名称 -->
+                <!-- 动态版本号显示位置 -->
+                <span id="version-text"></span>
+            </h3>
+        </div>
+        
+        <!-- 按钮容器 -->
+        <div class="button-box">
+            
+            <!-- 第一个按钮（带涟漪效果） -->
+            <div class="toggle-list ripple-element" id="script1">
+                <!-- 按钮文本 -->
+                <span class="toggle-text">清理 "环境检测工具"私有目录</span>
+            </div>
+
+            <!-- 第二个按钮（带涟漪效果） -->
+            <div class="toggle-list ripple-element" id="script2">
+                <!-- 按钮文本 -->
+                <span class="toggle-text">还原 "环境检测工具"私有目录</span>
+            </div>
+            
+            <!-- 第三个按钮（带涟漪效果） -->
+            <div class="toggle-list ripple-element" id="script3">
+                <!-- 按钮文本 -->
+                <span class="toggle-text">开启 自动清理</span>
+            </div>
+            
+            <!-- 第四个按钮（带涟漪效果） -->
+            <div class="toggle-list ripple-element" id="script4">
+                <!-- 按钮文本 -->
+                <span class="toggle-text">关闭 自动清理</span>
+            </div>
+
+            <!-- 第五个按钮（带涟漪效果） -->
+            <div class="toggle-list ripple-element" id="script5">
+                <!-- 按钮文本 -->
+                <span class="toggle-text">查看日志</span>
+            </div>
+
+        </div>
+        
+        <!-- 输出终端区域 -->
+        <div class="output-terminal">
+            <!-- 终端标题栏 -->
+            <div class="output-terminal-header">
+                <span>output</span> <!-- 标题文本 -->
+                <!-- 清除按钮 -->
+                <div class="clear-terminal">
+                    <!-- 清除图标 (SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#ccc">
+                        <!-- SVG路径：垃圾桶图标 -->
+                        <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                    </svg>
+                    <!-- 清除文本 -->
+                    <span class="clear-terminal-text">clear</span>
+                </div>
+            </div>
+            <!-- 终端内容输出区域 -->
+            <div class="output-terminal-content"></div>
+        </div>
+    </div>
+</body>
+</html>

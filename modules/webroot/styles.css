@@ -1,0 +1,260 @@
+/* 定义等宽字体 */
+@font-face {
+    font-family: 'Mono'; /* 字体家族名称 */
+    src: url('assets/RobotoMono-Regular.ttf') format('truetype'); /* 字体文件路径 */
+    font-weight: normal; /* 正常粗细 */
+    font-style: normal; /* 正常样式 */
+}
+
+/* 基础页面样式 */
+body {
+    background-color: #F5F5F5; /* 浅灰背景 */
+    /* 使用 MMRL 提供的安全区域变量 */
+    padding-top: var(--window-inset-top); /* 顶部安全区 */
+    padding-bottom: var(--window-inset-bottom); /* 底部安全区 */
+}
+
+/* 主内容区域 */
+.content {
+    padding-bottom: 10px; /* 底部内边距 */
+    display: flex; /* 弹性布局 */
+    flex-direction: column; /* 垂直方向排列 */
+    align-items: center; /* 水平居中 */
+    height: 90vh; /* 占视口高度的90% */
+    gap: 15px; /* 子元素间距 */
+}
+
+/* 头部样式 */
+.header {
+    user-select: none; /* 禁止文本选择 */
+}
+
+/* 按钮容器样式 */
+.button-box {
+    width: calc(85vw + 30px); /* 响应式宽度 */
+    max-width: 800px; /* 最大宽度限制 */
+    flex-shrink: 0; /* 禁止收缩 */
+    background-color: #fff; /* 白色背景 */
+    border: none; /* 无边框 */
+    border-radius: 15px; /* 圆角 */
+    box-sizing: border-box; /* 盒模型计算方式 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    overflow: hidden; /* 溢出隐藏 */
+}
+
+/* 按钮列表项样式 */
+.toggle-list {
+    display: flex; /* 弹性布局 */
+    align-items: center; /* 垂直居中 */
+    background-color: #fff; /* 白色背景 */
+    padding: 10px 20px; /* 内边距 */
+    white-space: nowrap; /* 不换行 */
+    text-align: left; /* 左对齐 */
+    border-bottom: 1px solid #ccc; /* 底部边框 */
+    position: relative; /* 相对定位 */
+    overflow: hidden; /* 溢出隐藏 */
+}
+
+/* 最后一个列表项取消底部边框 */
+.toggle-list:last-child {
+    border-bottom: none; /* 无边框 */
+    margin-bottom: 0; /* 取消底部外边距 */
+}
+
+/* 按钮文本样式 */
+.toggle-text {
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 粗体 */
+    white-space: wrap; /* 允许换行 */
+    max-width: calc(100% - 76px); /* 最大宽度（避免与开关重叠） */
+    user-select: none; /* 禁止文本选择 */
+}
+
+/* 开关容器样式 */
+.toggle-switch {
+    position: relative; /* 相对定位 */
+    display: inline-block; /* 行内块 */
+    margin-left: auto; /* 左外边距自动（推至右侧） */
+    width: 40px; /* 宽度 */
+    height: 25px; /* 高度 */
+}
+
+/* 隐藏原生复选框 */
+.toggle-switch input {
+    opacity: 0; /* 完全透明 */
+    width: 0; /* 宽度0 */
+    height: 0; /* 高度0 */
+}
+
+/* 滑块背景 */
+.slider {
+    position: absolute; /* 绝对定位 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* 默认灰色 */
+    -webkit-transition: .4s; /* 过渡动画 */
+    transition: .4s; /* 过渡动画 */
+}
+
+/* 滑块圆形按钮 */
+.slider:before {
+    position: absolute; /* 绝对定位 */
+    content: ""; /* 伪元素内容 */
+    height: 19px; /* 高度 */
+    width: 19px; /* 宽度 */
+    left: 3px; /* 左侧位置 */
+    bottom: 3px; /* 底部位置 */
+    background-color: white; /* 白色背景 */
+    transition: .4s; /* 过渡动画 */
+}
+
+/* 选中状态的滑块背景 */
+input:checked + .slider {
+    background-color: #007bff; /* 蓝色背景 */
+}
+
+/* 聚焦状态的滑块阴影 */
+input:focus + .slider {
+    box-shadow: 0 0 1px #007bff; /* 蓝色阴影 */
+}
+
+/* 选中状态下的滑块位置 */
+input:checked + .slider:before {
+    transform: translateX(15px); /* 水平移动 */
+}
+
+/* 圆形滑块 */
+.slider.round {
+    border-radius: 25px; /* 完全圆角 */
+}
+
+/* 圆形滑块按钮 */
+.slider.round:before {
+    border-radius: 50%; /* 圆形 */
+}
+
+/* 输出终端容器 */
+.output-terminal {
+    width: calc(85vw + 30px); /* 响应式宽度 */
+    max-width: 800px; /* 最大宽度 */
+    flex-grow: 1; /* 占据剩余空间 */
+    background-color: #fff; /* 白色背景 */
+    box-sizing: border-box; /* 盒模型 */
+    border-radius: 15px; /* 圆角 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    overflow: hidden; /* 溢出隐藏 */
+}
+
+/* 终端顶部标题栏 */
+.output-terminal-header {
+    display: flex; /* 弹性布局 */
+    padding: 5px 15px; /* 内边距 */
+    font-size: 14px; /* 字体大小 */
+    justify-content: space-between; /* 两端对齐 */
+    background-color: #E0E0E0; /* 浅灰背景 */
+    color: #333; /* 文字颜色 */
+    user-select: none; /* 禁止文本选择 */
+}
+
+/* 清除按钮容器 */
+.clear-terminal {
+    display: flex; /* 弹性布局 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 清除按钮图标样式 */
+.clear-terminal svg {
+    fill: #333; /* 图标填充色 */
+}
+
+/* 终端内容区域 */
+.output-terminal-content {
+    font-family: 'Mono'; /* 等宽字体 */
+    font-size: 14px; /* 字体大小 */
+    padding: 10px; /* 内边距 */
+    width: calc(100% - 20px); /* 宽度减去内边距 */
+    height: calc(100% - 50px); /* 高度减去标题栏高度 */
+    overflow-y: scroll; /* 垂直滚动 */
+}
+
+/* 输出内容段落 */
+.output-content {
+    position: relative; /* 相对定位 */
+    width: 100%; /* 全宽 */
+    padding: 0; /* 无内边距 */
+    margin: 0; /* 无外边距 */
+    white-space: pre-wrap; /* 保留空白换行 */
+    word-break: break-word; /* 允许单词内断行 */
+}
+
+/* 涟漪效果容器 */
+.ripple-element {
+    position: relative; /* 相对定位 */
+    overflow: hidden; /* 溢出隐藏 */
+}
+
+/* 涟漪动画元素 */
+.ripple {
+    position: absolute; /* 绝对定位 */
+    border-radius: 50%; /* 圆形 */
+    transform: scale(0); /* 初始缩放为0 */
+    opacity: 1; /* 完全不透明 */
+    animation: ripple-animation ease-out forwards; /* 应用动画 */
+    pointer-events: none; /* 不响应鼠标事件 */
+    background: rgba(0, 0, 0, 0.2); /* 半透明白色背景 */
+}
+
+/* 涟漪结束状态 */
+.ripple.end {
+    opacity: 0; /* 完全透明 */
+}
+
+/* 涟漪动画关键帧 */
+@keyframes ripple-animation {
+    to {
+        transform: scale(3); /* 放大到3倍 */
+    }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    /* 深色模式基础样式 */
+    body {
+        background-color: #121212; /* 深灰背景 */
+        color: #fff; /* 白色文字 */
+    }
+
+    /* 深色模式元素样式 */
+    .toggle-list,
+    .button-box,
+    .output-terminal-header {
+        background-color: #343434; /* 深灰背景 */
+    }
+
+    /* 终端标题栏深色样式 */
+    .output-terminal-header {
+        color: #ccc; /* 浅灰文字 */
+    }
+
+    /* 深色模式清除图标 */
+    .clear-terminal svg {
+        fill: #ccc; /* 浅灰填充 */
+    }
+
+    /* 深色模式终端背景 */
+    .output-terminal {
+        background-color: #232323; /* 深灰背景 */
+    }
+
+    /* 深色模式按钮边框 */
+    .toggle-list {
+        border-bottom: 1px solid #6E6E6E; /* 中灰边框 */
+    }
+    
+    /* 深色模式滑块背景 */
+    .slider {
+        background-color: #6E6E6E; /* 中灰背景 */
+    }
+}

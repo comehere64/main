@@ -30,7 +30,6 @@ fi
 
 ui_print "***************************************************"
 ui_print " "
-ui_print "- module information:"
 ui_print "- ADPDEDT version: $(grep_prop version $TMPDIR/module.prop)"
 ui_print " "
 
@@ -48,8 +47,18 @@ set_perm_recursive $MODPATH 0 0 0755 0644
 set_perm_recursive $ADPDEDT_PATH 0 0 0755 0644
 set_perm $MODPATH/action.sh 0 0 0755
 set_perm $MODPATH/service.sh 0 0 0755
-set_perm $MODPATH/main.sh 0 0 0755
+set_perm $MODPATH/delete.sh 0 0 0755
 set_perm $MODPATH/uninstall.sh 0 0 0755
+set_perm $MODPATH/recovery.sh 0 0 0755
+set_perm $MODPATH/test-along.sh 0 0 0755
+set_perm $MODPATH/start-delete.sh 0 0 0755
+set_perm $MODPATH/start-recovery.sh 0 0 0755
+set_perm $MODPATH/turn-off-ADDisjunctor.sh 0 0 0755
+set_perm $MODPATH/turn-on-ADDisjunctor.sh 0 0 0755
+
+# 打开 自动清理
+mv $MODPATH/auto-delete-disjunctor.txt $ADPDEDT_PATH/auto-delete-disjunctor.txt
+ui_print "Automatic cleanup is already enabled by default."
 ui_print " "
 
 ui_print "***************************************************"
