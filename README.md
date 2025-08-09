@@ -2,6 +2,8 @@
 
 自动删除环境检测工具私有目录（Automatically Delete Private Directories of Environment Detection Tools）
 
+<img src=".Image/Screen_capture_1.jpg" alt="Screen_capture_1"  />
+
 ------
 
 
@@ -71,7 +73,7 @@
 
 ## 6. 致谢
 本项目借鉴了诸多模块的源代码，以下为具体项目致谢（排名不分先后）：
-    
+
     模块基本结构：MMT-Extended (https://github.com/Zackptg5/MMT-Extended)
     安装脚本中判断模块刷入环境：LSPosed (https://github.com/LSPosed/LSPosed)
     安装脚本中输出格式与刷入逻辑：zerotier-magisk (https://github.com/eventlOwOp/zerotier-magisk)
