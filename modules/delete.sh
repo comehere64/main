@@ -95,5 +95,10 @@ rm -rvf /storage/emulated/0/Android/data/com.lingqing.detector
 rm -rvf /storage/emulated/0/Android/obb/com.lingqing.detector
 rm -rvf /storage/emulated/0/Android/media/com.lingqing.detector
 
+# ROOT检测 (wu.root.detector)
+rm -rvf /storage/emulated/0/Android/data/wu.root.detector
+rm -rvf /storage/emulated/0/Android/obb/wu.root.detector
+rm -rvf /storage/emulated/0/Android/media/wu.root.detector
+
 echo "执行完毕"
 exit 0

@@ -17,3 +17,4 @@ me.garfieldhan.holmes
 com.youhu.laifu
 com.chunqiu.detector
 com.lingqing.detector
+wu.root.detector

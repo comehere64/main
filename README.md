@@ -49,6 +49,7 @@
     17. APT检测 (com.youhu.laifu)
     18. 春秋检测 (com.chunqiu.detector)
     19. LingQingDetector (com.lingqing.detector)
+    20. ROOT检测 (wu.root.detector)
 
 
 
@@ -78,5 +79,5 @@
     安装脚本中判断模块刷入环境：LSPosed (https://github.com/LSPosed/LSPosed)
     安装脚本中输出格式与刷入逻辑：zerotier-magisk (https://github.com/eventlOwOp/zerotier-magisk)
     Ksu WebUI 界面：Play Integrity Fix(https://github.com/chiteroman/PlayIntegrityFix)
-    `action.sh`跳转Ksu WebUI：Tricky-Addon-Update-Target-List (https://github.com/KOWX712/Tricky-Addon-Update-Target-List)
+    "action.sh" 跳转Ksu WebUI：Tricky-Addon-Update-Target-List (https://github.com/KOWX712/Tricky-Addon-Update-Target-List)
  
